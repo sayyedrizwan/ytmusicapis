@@ -15,6 +15,21 @@ app.get('/', (req, res) => {
     })
 })
 
+
+app.get('/artists', (req, res) => {
+    api.initalize().then(info => {
+        api.search("justin bieber", "artist").then(result => res.send(result))
+    })
+})
+
+app.get('/artistslist', (req, res) => {
+    api.initalize().then(info => {
+        api.getArtist("UCGvj8kfUV5Q6lzECIrGY19g").then(result => res.send(result))
+    })
+})
+
+
+
 app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`)
 })
