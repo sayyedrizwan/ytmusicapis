@@ -8,7 +8,7 @@ const api = new YoutubeMusicApi()
 
 app.get('/', (req, res) => {
     api.initalize().then(info => {
-        api.search("sorry").then(result => {
+        api.search("sor").then(result => {
             res.send(result)
         })
     })
