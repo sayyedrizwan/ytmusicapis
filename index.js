@@ -6,9 +6,9 @@ const YoutubeMusicApi = require('youtube-music-api')
 const api = new YoutubeMusicApi()
 
 
-app.get('/', (req, res) => {
+app.get('/search', (req, res) => {
     api.initalize().then(info => {
-        api.search("sor").then(result => {
+        api.search("sorry").then(result => {
             res.send(result)
         })
     })
